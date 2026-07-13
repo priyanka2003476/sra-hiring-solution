@@ -93,9 +93,9 @@ export default function Navbar() {
             ))}
 
             <div className="mt-4">
-              <PrimaryButton>
+              {/* <PrimaryButton>
                 Hire Talent
-              </PrimaryButton>
+              </PrimaryButton> */}
             </div>
           </nav>
         </div>
