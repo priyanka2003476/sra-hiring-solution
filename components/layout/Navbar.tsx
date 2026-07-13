@@ -54,9 +54,9 @@ export default function Navbar() {
           {/* Right Side */}
           <div className="flex items-center gap-4">
             <div className="hidden lg:block">
-              <PrimaryButton>
+              {/* <PrimaryButton>
                 Hire Talent
-              </PrimaryButton>
+              </PrimaryButton> */}
             </div>
 
             {/* Mobile Menu Button */}
