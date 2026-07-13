@@ -48,8 +48,10 @@ const industries = [
 
 export default function Industries() {
   return (
-    <section className="bg-slate-50 py-24">
-      <Container>
+<section
+  id="industries"
+  className="bg-slate-50 py-24"
+>      <Container>
         <div className="mx-auto max-w-3xl text-center">
       <div className="inline-flex items-center rounded-full bg-blue-100 px-5 py-2">
   <span className="text-sm font-extrabold uppercase tracking-[0.25em] text-blue-700">

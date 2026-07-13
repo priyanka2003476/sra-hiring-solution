@@ -37,8 +37,10 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-slate-50 py-16 sm:py-20 lg:py-28">
-      <Container>
+<section
+  id="faq"
+  className="bg-slate-50 py-16 sm:py-20 lg:py-28"
+>      <Container>
         <div
           className="fade-up text-center"
           style={{ marginLeft: "auto", marginRight: "auto", maxWidth: "42rem" }}

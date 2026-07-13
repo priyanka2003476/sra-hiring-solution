@@ -51,8 +51,10 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="bg-slate-50 py-24">
-      <Container>
+<section
+  id="services"
+  className="bg-white py-24"
+>      <Container>
         <div className="text-center">
          <div className="inline-flex items-center rounded-full bg-blue-100 px-5 py-2">
   <span className="text-sm font-extrabold uppercase tracking-[0.25em] text-blue-700">

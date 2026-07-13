@@ -7,8 +7,7 @@ import PrimaryButton from "@/components/common/PrimaryButton";
 
 export default function About() {
   return (
-    <section className="bg-slate-50 py-16 sm:py-20 lg:py-24">
-      <Container>
+<section id="about" className="bg-slate-50 py-16 sm:py-20 lg:py-24">      <Container>
         <div className="grid items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-20">
           {/* LEFT */}
 <div className="fade-up relative order-2 mx-auto max-w-md sm:max-w-lg lg:order-1 lg:mx-0 lg:max-w-none">            <Image

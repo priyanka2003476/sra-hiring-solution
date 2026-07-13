@@ -13,7 +13,7 @@ const CLIENT_LOGOS = [
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50">
+    <section    id="home" className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50">
       <div className="pointer-events-none absolute left-0 top-0 h-72 w-72 rounded-full bg-blue-100/40 blur-3xl sm:h-96 sm:w-96" />
       <div className="pointer-events-none absolute bottom-0 right-0 h-72 w-72 rounded-full bg-sky-100/40 blur-3xl sm:h-96 sm:w-96" />
 

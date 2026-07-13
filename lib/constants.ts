@@ -9,26 +9,26 @@ export const COMPANY = {
 export const NAV_LINKS = [
   {
     title: "Home",
-    href: "/",
+    href: "#home",
   },
   {
     title: "About",
-    href: "/about",
+    href: "#about",
   },
   {
     title: "Services",
-    href: "/services",
+    href: "#services",
   },
   {
     title: "Industries",
-    href: "/industries",
+    href: "#industries",
   },
   {
-    title: "Careers",
-    href: "/careers",
+    title: "FAQ",
+    href: "#faq",
   },
   {
     title: "Contact",
-    href: "/contact",
+    href: "#contact",
   },
 ];
