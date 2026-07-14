@@ -37,13 +37,24 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-<section
-  id="faq"
-  className="bg-slate-50 py-16 sm:py-20 lg:py-28"
->      <Container>
+    <section
+      id="faq"
+      className="relative overflow-hidden bg-gradient-to-b from-white via-blue-50/50 to-slate-50 py-16 sm:py-20 lg:py-28"
+    >
+      {/* Background Glow */}
+
+      <div className="pointer-events-none absolute -left-32 top-0 h-80 w-80 rounded-full bg-blue-200/40 blur-3xl" />
+
+      <div className="pointer-events-none absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-blue-100/50 blur-3xl" />
+
+      <Container className="relative z-10">
         <div
           className="fade-up text-center"
-          style={{ marginLeft: "auto", marginRight: "auto", maxWidth: "42rem" }}
+          style={{
+            marginLeft: "auto",
+            marginRight: "auto",
+            maxWidth: "42rem",
+          }}
         >
           <div className="inline-flex items-center rounded-full bg-blue-100 px-4 py-1.5 sm:px-5 sm:py-2">
             <span className="text-xs font-extrabold uppercase tracking-[0.2em] text-blue-700 sm:text-sm sm:tracking-[0.25em]">
@@ -63,56 +74,64 @@ export default function FAQ() {
 
         <div
           className="mt-12 sm:mt-16"
-          style={{ marginLeft: "auto", marginRight: "auto", maxWidth: "56rem" }}
+          style={{
+            marginLeft: "auto",
+            marginRight: "auto",
+            maxWidth: "56rem",
+          }}
         >
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
             const isLast = index === faqs.length - 1;
 
             return (
-<div
-  key={faq.question}
-  className={`fade-up group overflow-hidden rounded-2xl border bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-400 hover:shadow-xl ${
-    isOpen ? "border-blue-500 shadow-lg" : "border-slate-200"
-  }`}
-  style={{
-    animationDelay: `${index * 0.08}s`,
-    marginBottom: isLast ? "0px" : "20px",
-  }}
-  onMouseEnter={() => setOpenIndex(index)}
-  onMouseLeave={() => setOpenIndex(null)}
->
-  <button
-    onClick={() => setOpenIndex(isOpen ? null : index)}
-    className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-8 sm:py-6"
-  >
-    <span className="text-base font-semibold text-slate-900 transition-colors duration-300 group-hover:text-blue-700 sm:text-lg">
-      {faq.question}
-    </span>
+              <div
+                key={faq.question}
+                className={`fade-up group overflow-hidden rounded-2xl border bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-400 hover:shadow-xl ${
+                  isOpen
+                    ? "border-blue-500 shadow-lg"
+                    : "border-slate-200"
+                }`}
+                style={{
+                  animationDelay: `${index * 0.08}s`,
+                  marginBottom: isLast ? "0px" : "20px",
+                }}
+                onMouseEnter={() => setOpenIndex(index)}
+                onMouseLeave={() => setOpenIndex(null)}
+              >
+                <button
+                  onClick={() => setOpenIndex(isOpen ? null : index)}
+                  className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-8 sm:py-6"
+                >
+                  <span className="text-base font-semibold text-slate-900 transition-colors duration-300 group-hover:text-blue-700 sm:text-lg">
+                    {faq.question}
+                  </span>
 
-    <span
-      className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
-        isOpen
-          ? "bg-blue-600 text-white rotate-180"
-          : "bg-slate-100 text-slate-500 group-hover:bg-blue-100 group-hover:text-blue-600"
-      }`}
-    >
-      <ChevronDown size={18} />
-    </span>
-  </button>
+                  <span
+                    className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
+                      isOpen
+                        ? "rotate-180 bg-blue-600 text-white"
+                        : "bg-slate-100 text-slate-500 group-hover:bg-blue-100 group-hover:text-blue-600"
+                    }`}
+                  >
+                    <ChevronDown size={18} />
+                  </span>
+                </button>
 
-  <div
-    className={`overflow-hidden transition-all duration-500 ease-in-out ${
-      isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
-    }`}
-  >
-    <div className="border-t border-slate-200 px-5 py-5 sm:px-8 sm:py-6">
-      <p className="text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
-        {faq.answer}
-      </p>
-    </div>
-  </div>
-</div>
+                <div
+                  className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                    isOpen
+                      ? "max-h-40 opacity-100"
+                      : "max-h-0 opacity-0"
+                  }`}
+                >
+                  <div className="border-t border-slate-200 px-5 py-5 sm:px-8 sm:py-6">
+                    <p className="text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+                      {faq.answer}
+                    </p>
+                  </div>
+                </div>
+              </div>
             );
           })}
         </div>
@@ -129,6 +148,7 @@ export default function FAQ() {
             transform: translateY(0);
           }
         }
+
         .fade-up {
           opacity: 0;
           animation: fadeUp 0.6s ease-out forwards;

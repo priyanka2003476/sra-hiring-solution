@@ -8,8 +8,14 @@ import PrimaryButton from "@/components/common/PrimaryButton";
 import StatCard from "@/components/cards/StatCard";
 
 const CLIENT_LOGOS = [
-  "TCS", "Infosys", "Wipro", "HCL", "Tech Mahindra", "Cognizant", "Capgemini", "Accenture",
-];
+  "VIH Capital Advisory Private Limited",
+  "Finance Buddha Pvt. Ltd.",
+  "Relex Health Care Pvt. Ltd.",
+  "ElasticRun",
+  "Arvind Limited",
+  "Infoneo Technologies Pvt. Ltd.",
+  "Pratham Motors",
+  "Justdial Pvt. Ltd.",];
 
 export default function Hero() {
   return (
@@ -38,15 +44,15 @@ export default function Hero() {
 
             <div className="fade-up delay-4 mt-8 flex flex-wrap gap-4 sm:mt-10 sm:gap-5">
               <PrimaryButton className="px-6 py-3 text-sm sm:px-8 sm:py-4 sm:text-base">
-                Hire Talent
+                {/* Hire Talent */}
               </PrimaryButton>
 
               <button className="group flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition-all duration-300 hover:border-blue-600 hover:text-blue-600 hover:shadow-lg sm:px-8 sm:py-4 sm:text-base">
-                Explore Jobs
-                <ArrowRight
-                  size={18}
-                  className="transition-transform duration-300 group-hover:translate-x-1"
-                />
+                {/* Explore Jobs */}
+                {/* <ArrowRight */}
+                  {/* // size={18} */}
+                  {/* // className="transition-transform duration-300 group-hover:translate-x-1" */}
+                {/* /> */}
               </button>
             </div>
 
